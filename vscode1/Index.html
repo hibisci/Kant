@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <tltle>Chart图表展示</tltle>
+        <!-- 引入echarts.js 文件-->
+        <script src = "D:\Temp\incubator-echarts-master\dist\echarts.js"></script>        
+        <!--script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></!--script-->        
+
+    </head>
+
+    <body>
+        <div id = "main" style = "width:800px;height:500px"></div>
+        <script type = text/javascript>
+            var pChart = echarts.init(document.getElementById('main'));
+
+            var option = {
+                title:{
+                    text:'Echart图表'
+                },
+                legind:{
+                    data:['销量']
+                },
+                
+                xAxis:{
+                    data:["衬衫","羊毛衫","雪纺衫","牛仔裤"]
+                },
+                yAxis:{},
+                /**/
+                series:{
+                    name:'销量',
+                    type:'bar',
+                    //color:'red',
+                    data:[
+                        {value:5,name:'一季度'},
+                        {value:25,name:'二季度'},
+                        {value:64,name:'三季度'},
+                        {value:34,name:'四季度'},
+                        {value:55,name:'总数'}
+                    ]
+                }
+            }
+
+            pChart.setOption(option);
+            
+            </script>
+    </body>
+</html>
+    
